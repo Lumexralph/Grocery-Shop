@@ -1,3 +1,26 @@
+/* Colour List
+header -hex 23A823, rgb - 35, 168, 35
+header text - rgb - 189, 219, 189
+header active tab - rgb (246, 247, 246)
+
+Carousel/ other pages
+body - rgb (86, 149, 149)
+text - 238, 238, 238
+carousel picker - 158, 183, 183
+
+Button
+colour - 198, 231, 133
+button text - 109, 163, 0
+hover - 232, 243, 210
+
+footer
+background color - 0, 38, 0
+text - 72, 87, 72
+
+ */
+
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
