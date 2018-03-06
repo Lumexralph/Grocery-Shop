@@ -84,7 +84,7 @@ Theme Styles
 
 /* button */
 .btn-primary {
-  background: rgb(198, 231, 133);
+  background: rgb(126, 126, 126);
 }
 .btn-secondary {
   background: rgb(109, 163, 0);
@@ -119,8 +119,15 @@ Modules
   border-radius: 4px;
   transition: all 0.3s ease 0s;
 }
+.btn-section {
+  color: rgb(238, 238, 238);
+  height: 100px;
+  text-align: center;
+}
 .btn:hover {
-  background: rgb(232, 243, 210);
+  background: rgb(26, 126, 126);
+  border-color: white;
+  text-decoration: none
 }
 
 /* Header Modules */
