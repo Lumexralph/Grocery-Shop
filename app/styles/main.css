@@ -126,6 +126,7 @@ Modules
   text-align: center;
   padding-top: 18px;
   padding-bottom: 18px;
+  /* position: fixed; */
 }
 .header-nav {
   margin-top: 30px;
@@ -137,4 +138,9 @@ Modules
 }
 .link a:hover {
   text-decoration: none;
+}
+
+/* grocery cloud module */
+.grocery-primary {
+  height: 100px;
 }
