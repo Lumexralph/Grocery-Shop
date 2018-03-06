@@ -78,6 +78,9 @@ Theme Styles
 .main-secondary {
   background: rgb(158, 183, 183);
 }
+.view-primary {
+  background: rgb(198, 231, 133)
+}
 
 /* button */
 .btn-primary {
@@ -149,3 +152,5 @@ Modules
   background: rgb(189, 219, 189);
   color: rgb(0, 191, 0)
 }
+
+/* view module */
