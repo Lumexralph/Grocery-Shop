@@ -36,6 +36,25 @@ html {
 
 /***************************
 ****************************
+Layout Styles
+****************************
+***************************/
+/* Content Container*/
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+/* Row */
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/***************************
+****************************
 Theme Styles
 ****************************
 ***************************/
@@ -43,7 +62,7 @@ Theme Styles
   background-color: rgb(35, 168, 35);
 }
 .header-secondary {
-  background: rgb(189, 219, 189);
+  color: rgb(189, 219, 189);
 }
 .header-active {
   background: rgb(246, 247, 246);
@@ -103,15 +122,19 @@ Modules
 
 /* Header Modules */
 .header {
-  height: 200px;
+  height: 170px;
   text-align: center;
   padding-top: 18px;
   padding-bottom: 18px;
 }
 .header-nav {
   margin-top: 30px;
+  top: unset;
 }
 
 .link {
   list-style-type: none;
+}
+.link a:hover {
+  text-decoration: none;
 }
