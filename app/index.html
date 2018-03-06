@@ -23,18 +23,18 @@
     <![endif]-->
 
   <!-- Add your site or application content here -->
-  <header>
+  <header class="header">
     <div class="container-fluid">
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="">Grocery Shop</a>
-        </div>
-        <ul>
+      <nav class="nav navbar-fixed-top">
+        <ul class="header-nav link">
           <li>
-            <a href="">Link</a>
+              <a href="">Home</a>
           </li>
           <li>
-            <a href="">Link</a>
+            <a href="">Shop</a>
+          </li>
+          <li>
+            <a href="">Cart</a>
           </li>
           <li>
             <a href="">Link</a>
@@ -46,7 +46,9 @@
 
   <main>
     <div class="container">
-      <div ng-view=""></div>
+      <section>
+          <div ng-view=""></div>
+      </section>      
     </div>
   </main>
 
@@ -56,10 +58,10 @@
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
     !function (A, n, g, u, l, a, r) {
-    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-      (A[l].q = A[l].q || []).push(arguments)
-    }, A[l].l = +new Date, a = n.createElement(g),
-      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+      A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+        (A[l].q = A[l].q || []).push(arguments)
+      }, A[l].l = +new Date, a = n.createElement(g),
+        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
     }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-XXXXX-X');

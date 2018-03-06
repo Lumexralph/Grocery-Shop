@@ -61,13 +61,10 @@ Theme Styles
 }
 
 /* button */
-.btn {
+.btn-primary {
   background: rgb(198, 231, 133);
 }
-.btn:hover {
-  background: rgb(232, 243, 210);
-}
-.btn-text {
+.btn-secondary {
   background: rgb(109, 163, 0);
 }
 
@@ -77,4 +74,44 @@ Theme Styles
 }
 .footer-secondary {
   background: rgb(72, 87, 72);
+}
+
+/***************************
+****************************
+Modules
+****************************
+***************************/
+/* Button Modules */
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 12px 30px;
+  font-size: 1.313em;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  background: rgb(232, 243, 210);
+}
+
+/* Header Modules */
+.header {
+  height: 200px;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.header-nav {
+  margin-top: 30px;
+}
+
+.link {
+  list-style-type: none;
 }
