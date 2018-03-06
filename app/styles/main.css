@@ -141,6 +141,11 @@ Modules
 }
 
 /* grocery cloud module */
+.grocery {
+  height: 200px;
+  text-align: center;
+}
 .grocery-primary {
-  height: 100px;
+  background: rgb(189, 219, 189);
+  color: rgb(0, 191, 0)
 }
