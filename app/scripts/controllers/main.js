@@ -10,6 +10,7 @@
 angular.module('mod2LabApp')
   .controller('MainCtrl', ['MainService', 
   function (mainService) {
+    this.active = 0;
     this.imageSrc = [
       'images/a.jpg',
       'images/yeoman.png',

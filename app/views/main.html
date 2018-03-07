@@ -1,31 +1,16 @@
-<section>
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="{{$index}}" class="{{::($index === 0 ? 'active' : '')}}" ng-repeat="data in main.imageSrc"></li>
-    </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item {{::($index === 0 ? 'active' : '')}}" ng-repeat="img in main.imageSrc">
-        <img ng-src="{{img}}" alt="...">
+<section>
+    <div uib-carousel active="main.active" interval="5000" class="carousel-inner" role="listbox">
+      <div uib-slide ng-repeat="slide in main.imageSrc" index="$index" ng-class="{active : $first}">
+        <img ng-src="{{slide}}" style="margin:auto;">
         <div class="carousel-caption">
-          ...
+          <h1>An image</h1>
+          <p>It's description</p>
+          <!-- <h3>{{slide.publication}}</h3> -->
         </div>
       </div>
     </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</section>
+  </section>
 
 <section class="btn-section">
   <div class="container">
