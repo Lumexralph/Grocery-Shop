@@ -53,6 +53,12 @@ Layout Styles
   margin-left: -15px;
 }
 
+/* for desktop */
+
+@media (min-width: 48em) {
+  
+}
+
 /***************************
 ****************************
 Theme Styles
@@ -127,24 +133,66 @@ Modules
   text-decoration: none
 }
 
+/* for desktop */
+
+@media (min-width: 48em) {
+  
+}
+
+
 /* Header Modules */
 .header {
   height: 170px;
   text-align: center;
   padding-top: 18px;
   padding-bottom: 18px;
-  /* position: fixed; */
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 .header-nav {
   margin-top: 30px;
   top: unset;
 }
-
+.header-nav-primary {
+  background: rgb(0, 105, 105);
+  color: rgb(221, 243, 243);
+}
+.header-secondary-nav {
+  padding: 5px;
+  border-radius: 5%;
+}
 .link {
   list-style-type: none;
 }
 .link a:hover {
   text-decoration: none;
+  background: none;
+  border: 1px solid white;
+}
+
+/* for desktop */
+
+@media (min-width: 40em) {
+  .header {
+    height: 60px;
+  }
+  .header-nav {
+    font-size: 1.125em;
+    margin-top: 0;
+  }
+  .link {
+    display: flex;
+  }
+  .nav-link {
+    flex: 2;
+    text-align: left;
+  }
+  .cart {
+    flex: 8;
+    text-align: right;
+  }
+
 }
 
 /* grocery cloud module */
