@@ -200,9 +200,18 @@ Modules
   height: 200px;
   text-align: center;
 }
+.grocery-title {
+  font-weight: bolder;
+}
 .grocery-primary {
   background: rgb(189, 219, 189);
   color: rgb(0, 191, 0)
+}
+
+@media (min-width: 40em) { 
+  .grocery {
+    height: 150px;
+  }
 }
 
 /* footer Module */
