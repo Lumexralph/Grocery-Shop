@@ -1,83 +1,166 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+/* Colour List
+header -hex 23A823, rgb - 35, 168, 35
+header text - rgb - 189, 219, 189
+header active tab - rgb (246, 247, 246)
+
+Carousel/ other pages
+body - rgb (86, 149, 149)
+text - 238, 238, 238
+carousel picker - 158, 183, 183
+
+Button
+colour - 198, 231, 133
+button text - 109, 163, 0
+hover - 232, 243, 210
+
+footer
+background color - 0, 38, 0
+text - 72, 87, 72
+
+ */
+
+ /***************************
+****************************
+Reset
+****************************
+***************************/
+@import 'normalize.css';
+
+/* Change all elements to use border-box */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-body {
-  padding: 0;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
+/***************************
+****************************
+Layout Styles
+****************************
+***************************/
+/* Content Container*/
+.container {
   padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+/* Row */
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+.header-primary {
+  background-color: rgb(35, 168, 35);
 }
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+.header-secondary {
+  color: rgb(189, 219, 189);
 }
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+.header-active {
+  background: rgb(246, 247, 246);
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+/* main body */
+.main-primary {
+  background: rgb(86, 149, 149);
+}
+.main-secondary {
+  background: rgb(238, 238, 238);
+}
+.main-secondary {
+  background: rgb(158, 183, 183);
+}
+.view-primary {
+  background: rgb(198, 231, 133)
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+/* button */
+.btn-primary {
+  background: rgb(126, 126, 126);
+}
+.btn-secondary {
+  background: rgb(109, 163, 0);
+}
+
+/* footer */
+.footer-primary {
+  background: rgb(0, 38, 0);
+}
+.footer-secondary {
+  background: rgb(72, 87, 72);
+}
+
+/***************************
+****************************
+Modules
+****************************
+***************************/
+/* Button Modules */
+.btn {
+  display: inline-block;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 12px 30px;
+  font-size: 1.313em;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease 0s;
 }
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+.btn-section {
+  color: rgb(238, 238, 238);
+  height: 100px;
+  text-align: center;
+}
+.btn:hover {
+  background: rgb(26, 126, 126);
+  border-color: white;
+  text-decoration: none
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
+/* Header Modules */
+.header {
+  height: 170px;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  /* position: fixed; */
 }
-.marketing p + h4 {
-  margin-top: 28px;
+.header-nav {
+  margin-top: 30px;
+  top: unset;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+.link {
+  list-style-type: none;
+}
+.link a:hover {
+  text-decoration: none;
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+/* grocery cloud module */
+.grocery {
+  height: 200px;
+  text-align: center;
+}
+.grocery-primary {
+  background: rgb(189, 219, 189);
+  color: rgb(0, 191, 0)
+}
+
+/* footer Module */
+.footer {
+  height: 300px;
 }
