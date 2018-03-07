@@ -160,4 +160,7 @@ Modules
   color: rgb(0, 191, 0)
 }
 
-/* view module */
+/* footer Module */
+.footer {
+  height: 300px;
+}
