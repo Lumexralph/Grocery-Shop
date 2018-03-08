@@ -98,7 +98,7 @@ Theme Styles
   background: rgb(0, 38, 0);
 }
 .footer-secondary {
-  background: rgb(72, 87, 72);
+  background: rgb(189, 202, 189);
 }
 
 /***************************
@@ -224,4 +224,11 @@ Modules
 .footer {
   height: 200px;
   text-align: center;
+}
+.footer-text, .footer-text a {
+  text-decoration: none;
+  color: rgb(189, 202, 189);
+}
+.footer-text a:hover {
+  color: rgb(26, 126, 126);
 }
