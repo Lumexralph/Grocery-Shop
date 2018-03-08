@@ -19,19 +19,27 @@ angular
     'ui.bootstrap',
     'ui.bootstrap.tpls'
   ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', '$locationProvider', 
+  function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
+      .when('/about/', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/shop/', {
+        templateUrl: 'views/shop.html',
+        controller: 'ShopController',
+        controllerAs: 'shop'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }
+]);
