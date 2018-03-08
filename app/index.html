@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="mod2LabApp">
 
 <head>
   <meta charset="utf-8">
@@ -17,7 +17,7 @@
   <!-- endbuild -->
 </head>
 
-<body ng-app="mod2LabApp">
+<body>
   <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -27,17 +27,17 @@
     <div class="container">
       <nav class="nav header-nav">
         <ul class="link">
-          <li>
-            <a class="header-secondary" href="">Home</a>
+          <li class="nav-link">
+            <a class="header-nav-primary header-secondary header-secondary-nav" href="">Home</a>
           </li>
-          <li>
-            <a class="header-secondary" href="">Products</a>
+          <li class="nav-link">
+            <a class="header-secondary header-secondary-nav" href="">Products</a>
           </li>
-          <li>
-            <a class="header-secondary" href="">About Us</a>
+          <li class="nav-link">
+            <a class="header-secondary header-secondary-nav" href="">Shop</a>
           </li>
-          <li>
-            <a class="header-secondary" href="">Cart</a>
+          <li class="cart">
+            <a class="header-secondary header-secondary-nav" href="">Cart</a>
           </li>
         </ul>
       </nav>
@@ -47,19 +47,42 @@
   <main>
     <section class="grocery grocery-primary">
       <div class="container">
-        <h1>Grocery Cloud</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Culpa ipsam obcaecati suscipit reprehenderit. Labore placeat accusantium modi? Ipsum natus veniam inventore a, rem fuga! Autem, maxime iusto! Totam.</p>
+        <h2 class="grocery-title">Grocery Cloud</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Culpa ipsam obcaecati suscipit reprehenderit.
+          Labore placeat accusantium modi? Ipsum natus veniam inventore a, rem fuga! Autem, maxime iusto! Totam.</p>
       </div>
     </section>
     <section>
-      <div class="container">
-        <div ng-view=""></div>
-      </div>
+       <div ng-view=""></div>
     </section>
-    
+
   </main>
 
-  <footer class="footer footer-primary">Footer</footer>
+  <footer class="footer footer-primary footer-text">
+    <div class="container">
+      <div class="row">CompanyName/Logo</div>
+      <div class="row">email</div>
+      <div class="row">
+        <div class="col-xs-12 col-md-6" col-lg-6><a href="#">About Us</a></div>
+        <div class="col-xs-12 col-md-6 col-lg-6"><a href="#">Contact Us</a></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 col-md-3 col-lg-3">
+          <a href="#">github</a>
+        </div>
+        <div class="col-xs-3 col-md-3 col-lg-3">
+          <a href="#">FCC</a>
+        </div>
+        <div class="col-xs-3 col-md-3 col-lg-3">
+          <a href="">Linkedin</a>
+        </div>
+        <div class="col-xs-3 col-md-3 col-lg-3">
+          <a href="#">any social media</a>
+        </div>
+      </div>
+      <div class="row">Copyright</div>
+    </div>
+  </footer>
 
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -86,6 +109,8 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 

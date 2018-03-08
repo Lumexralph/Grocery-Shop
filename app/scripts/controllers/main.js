@@ -10,11 +10,14 @@
 angular.module('mod2LabApp')
   .controller('MainCtrl', ['MainService', 
   function (mainService) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    this.active = 0;
+    this.toggleOn = 1;
+    this.imageSrc = [
+      'images/a.jpg',
+      'images/b.jpg'
     ];
+
+    // handle
 
     mainService.message().then(result => this.message= result.data.message);
   

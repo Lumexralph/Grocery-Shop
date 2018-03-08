@@ -53,6 +53,15 @@ Layout Styles
   margin-left: -15px;
 }
 
+.float-right {
+  float: right;
+}
+/* for desktop */
+
+@media (min-width: 48em) {
+  
+}
+
 /***************************
 ****************************
 Theme Styles
@@ -70,7 +79,7 @@ Theme Styles
 
 /* main body */
 .main-primary {
-  background: rgb(86, 149, 149);
+  background: rgb(6, 117, 117);
 }
 .main-secondary {
   background: rgb(238, 238, 238);
@@ -92,7 +101,7 @@ Theme Styles
   background: rgb(0, 38, 0);
 }
 .footer-secondary {
-  background: rgb(72, 87, 72);
+  background: rgb(189, 202, 189);
 }
 
 /***************************
@@ -101,7 +110,7 @@ Modules
 ****************************
 ***************************/
 /* Button Modules */
-.btn {
+.button {
   display: inline-block;
   text-align: center;
   white-space: nowrap;
@@ -121,11 +130,18 @@ Modules
   height: 100px;
   text-align: center;
 }
-.btn:hover {
+.button:hover {
   background: rgb(26, 126, 126);
   border-color: white;
   text-decoration: none
 }
+
+/* for desktop */
+
+@media (min-width: 48em) {
+  
+}
+
 
 /* Header Modules */
 .header {
@@ -133,18 +149,53 @@ Modules
   text-align: center;
   padding-top: 18px;
   padding-bottom: 18px;
-  /* position: fixed; */
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 .header-nav {
   margin-top: 30px;
   top: unset;
 }
-
+.header-nav-primary {
+  background: rgb(0, 105, 105);
+  color: rgb(221, 243, 243);
+}
+.header-secondary-nav {
+  padding: 5px;
+  border-radius: 5%;
+}
 .link {
   list-style-type: none;
 }
 .link a:hover {
   text-decoration: none;
+  background: none;
+  border: 1px solid white;
+}
+
+/* for desktop */
+
+@media (min-width: 40em) {
+  .header {
+    height: 60px;
+  }
+  .header-nav {
+    font-size: 1.125em;
+    margin-top: 0;
+  }
+  .link {
+    display: flex;
+  }
+  .nav-link {
+    flex: 2;
+    text-align: left;
+  }
+  .cart {
+    flex: 8;
+    text-align: right;
+  }
+
 }
 
 /* grocery cloud module */
@@ -152,12 +203,46 @@ Modules
   height: 200px;
   text-align: center;
 }
+.grocery-title {
+  font-weight: bolder;
+}
 .grocery-primary {
   background: rgb(189, 219, 189);
   color: rgb(0, 191, 0)
 }
+/* desktop */
+@media (min-width: 40em) { 
+  .grocery {
+    height: 150px;
+  }
+}
+
+/* Carousle Module */
+.main-page-carousel {
+  padding-top: 20px;
+  background: rgb(6, 117, 117);
+}
+button[uib-btn-checkbox] {
+  margin-bottom: 10px;
+}
 
 /* footer Module */
 .footer {
-  height: 300px;
+  height: 200px;
+  text-align: center;
+}
+.footer-text, .footer-text a {
+  text-decoration: none;
+  color: rgb(189, 202, 189);
+}
+.footer-text a:hover {
+  color: rgb(26, 126, 126);
+}
+
+/* for desktop */
+
+@media (min-width: 48em) {
+  
+}.footer {
+  height: 150px;
 }
