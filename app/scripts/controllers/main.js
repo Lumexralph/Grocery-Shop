@@ -13,7 +13,6 @@ angular.module('mod2LabApp')
     this.active = 0;
     this.imageSrc = [
       'images/a.jpg',
-      'images/yeoman.png',
       'images/b.jpg'
     ];
 

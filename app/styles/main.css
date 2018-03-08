@@ -76,7 +76,7 @@ Theme Styles
 
 /* main body */
 .main-primary {
-  background: rgb(86, 149, 149);
+  background: rgb(6, 117, 117);
 }
 .main-secondary {
   background: rgb(238, 238, 238);
@@ -207,11 +207,17 @@ Modules
   background: rgb(189, 219, 189);
   color: rgb(0, 191, 0)
 }
-
+/* desktop */
 @media (min-width: 40em) { 
   .grocery {
     height: 150px;
   }
+}
+
+/* Carousle Module */
+.main-page-carousel {
+  padding-top: 20px;
+  background: rgb(6, 117, 117);
 }
 
 /* footer Module */

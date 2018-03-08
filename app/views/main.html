@@ -1,20 +1,26 @@
 
-<section>
-    <div uib-carousel active="main.active" interval="5000" class="carousel-inner" role="listbox">
-      <div uib-slide ng-repeat="slide in main.imageSrc" index="$index" ng-class="{active : $first}">
-        <img ng-src="{{slide}}" style="margin:auto;">
-        <div class="carousel-caption">
-          <h1>An image</h1>
-          <p>It's description</p>
-          <!-- <h3>{{slide.publication}}</h3> -->
+<section class="main-page-carousel">
+  <div class="container">
+    <div class="row">
+      </div>
+      <div uib-carousel active="main.active" interval="5000" class="carousel-inner" role="listbox">
+        <div uib-slide ng-repeat="slide in main.imageSrc" index="$index" ng-class="{active : $first}">
+          <img class="img-responsive center-block" ng-src="{{slide}}" style="margin:auto;">
+          <div class="carousel-caption">
+            <h1>An image</h1>
+            <p>It's description</p>
+            <!-- <h3>{{slide.publication}}</h3> -->
+          </div>
         </div>
       </div>
-    </div>
+    </div>  
   </section>
 
 <section class="btn-section">
   <div class="container">
-    <button class="btn btn-secondary">Let's Go Shopping</button>
+    <div class="row">
+            <button class="btn btn-secondary">Let's Go Shopping</button>
+    </div>
   </div>
 </section>
 </div>
