@@ -53,6 +53,9 @@ Layout Styles
   margin-left: -15px;
 }
 
+.float-right {
+  float: right;
+}
 /* for desktop */
 
 @media (min-width: 48em) {
@@ -107,7 +110,7 @@ Modules
 ****************************
 ***************************/
 /* Button Modules */
-.btn {
+.button {
   display: inline-block;
   text-align: center;
   white-space: nowrap;
@@ -127,7 +130,7 @@ Modules
   height: 100px;
   text-align: center;
 }
-.btn:hover {
+.button:hover {
   background: rgb(26, 126, 126);
   border-color: white;
   text-decoration: none
