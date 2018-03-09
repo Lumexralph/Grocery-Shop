@@ -305,4 +305,15 @@ Shopping Page
   .category-bottom-container {
     width: 100%; 
   }
+  .category-product-list-display {
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+  }
+  .product-on-left {
+    margin-right: 10px;
+  }
+  .category-product-list {
+    height: 200px;
+  }
 }
