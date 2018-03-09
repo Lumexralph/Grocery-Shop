@@ -292,6 +292,15 @@ Shopping Page
    border: 1px solid brown;
    margin: 2px 0;
  }
+ .product-list-setting {
+   padding: 5px;
+   margin: 5px;
+   border: 1px solid orange;
+ }
+ .product-list-setting-btn {
+   margin-right: 24px;
+ }
+
 
  
  

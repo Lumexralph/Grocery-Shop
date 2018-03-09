@@ -1,3 +1,29 @@
+<section class="product-list-setting">
+  <div class="container">
+    <div class="row">
+      <div class="btn-group product-list-setting-btn float-right" uib-dropdown is-open="shop.status.isOpen">
+        <button id="single-button" type="button" class="btn btn-secondary" uib-dropdown-toggle ng-disabled="disabled">
+          Sort By
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+          <li role="menuitem">
+            <a href="#">None</a>
+          </li>
+          <li role="menuitem">
+            <a href="#">Price</a>
+          </li>
+          <li role="menuitem">
+            <a href="#">Alphabetical</a>
+          </li>
+          <li role="menuitem">
+            <a href="#">Rating</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="category">
   <div class="container">
     <div class="row">
@@ -20,17 +46,17 @@
               <div class="row">
                 <!-- to achieve display of product in pairs -->
                 <div class="category-product-list-display">
-                    <div class="col-xs-12 category-product-list product-on-left">Product 1</div>
-                    <div class="col-xs-12 category-product-list">Product 2</div>
+                  <div class="col-xs-12 category-product-list product-on-left">Product 1</div>
+                  <div class="col-xs-12 category-product-list">Product 2</div>
                 </div>
                 <div class="category-product-list-display">
-                    <div class="col-xs-12 category-product-list product-on-left">Product 3</div>
-                    <div class="col-xs-12 category-product-list">Product 4</div>
+                  <div class="col-xs-12 category-product-list product-on-left">Product 3</div>
+                  <div class="col-xs-12 category-product-list">Product 4</div>
                 </div>
                 <div class="category-product-list-display">
-                    <div class="col-xs-12 category-product-list product-on-left">Product 5</div>
-                    <div class="col-xs-12 category-product-list">Product 6</div>
-                </div>             
+                  <div class="col-xs-12 category-product-list product-on-left">Product 5</div>
+                  <div class="col-xs-12 category-product-list">Product 6</div>
+                </div>
               </div>
             </div>
           </div>
@@ -38,5 +64,5 @@
       </div>
     </div>
   </div>
-  
+
 </section>
