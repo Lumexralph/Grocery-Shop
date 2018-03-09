@@ -1,25 +1,33 @@
 <section class="product-list-setting">
   <div class="container">
     <div class="row">
-      <div class="btn-group product-list-setting-btn float-right" uib-dropdown is-open="shop.status.isOpen">
-        <button id="single-button" type="button" class="btn btn-secondary" uib-dropdown-toggle ng-disabled="disabled">
-          Sort By
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-          <li role="menuitem">
-            <a href="#">None</a>
-          </li>
-          <li role="menuitem">
-            <a href="#">Price</a>
-          </li>
-          <li role="menuitem">
-            <a href="#">Alphabetical</a>
-          </li>
-          <li role="menuitem">
-            <a href="#">Rating</a>
-          </li>
-        </ul>
+      <div class="col-xs-12 col-sm-3 col-md-3">
+          <button type="button" class="btn btn-primary" ng-model="main.toggleOn" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">In-Stock Only</button>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-md-3">Display Quantity</div>
+      <div class="col-xs-12 col-sm-3 col-md-3">Display Category Name</div>
+      <div class="col-xs-12 col-sm-3 col-md-3">
+        <!-- ui bootstrap dropdown button -->
+          <div class="btn-group" uib-dropdown is-open="shop.status.isOpen">
+              <button id="single-button" type="button" class="btn btn-secondary" uib-dropdown-toggle ng-disabled="disabled">
+                Sort By
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                <li role="menuitem">
+                  <a href="#">None</a>
+                </li>
+                <li role="menuitem">
+                  <a href="#">Price</a>
+                </li>
+                <li role="menuitem">
+                  <a href="#">Alphabetical</a>
+                </li>
+                <li role="menuitem">
+                  <a href="#">Rating</a>
+                </li>
+              </ul>
+            </div>
       </div>
     </div>
   </div>

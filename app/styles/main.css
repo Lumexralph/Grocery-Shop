@@ -301,6 +301,11 @@ Shopping Page
    margin-right: 24px;
  }
 
+ /* make the sort  by menu fit */
+ .dropdown-menu {
+   min-width: unset;
+ }
+
 
  
  
