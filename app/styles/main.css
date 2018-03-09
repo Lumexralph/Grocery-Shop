@@ -246,3 +246,63 @@ button[uib-btn-checkbox] {
 }.footer {
   height: 150px;
 }
+
+/***************************
+****************************
+Shopping Page
+****************************
+***************************/
+ /* Theme */
+ .category-primary {
+
+ }
+ .category-secondary {
+
+ }
+ .category-complementary {
+
+ }
+
+ /* Category Module */
+ .category {  
+  /* height: 500px; */
+  position: relative;
+  border: 1px solid black;
+  padding: 5px;
+ }
+ .category-top {
+  height: 150px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 2px;
+ }
+ .category-top-column {
+  height: 30px;
+  border: 1px solid brown;
+  margin: 5px 0;
+ }
+ .category-product-bottom {
+  /* height: 350px; */
+  border: 1px solid rgb(112, 4, 4);
+  padding: 5px;
+  margin: 2px;
+ }
+ .category-product-list {
+   height: 100px;
+   border: 1px solid brown;
+   margin: 2px 0;
+ }
+
+ 
+ 
+ /* for desktop */
+
+@media (min-width: 48em) {
+  .category-top {
+    width: 32%
+  }
+
+  .category-bottom-container {
+    width: 100%; 
+  }
+}
