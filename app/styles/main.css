@@ -294,14 +294,17 @@ Shopping Page
  }
  .product-list-setting {
    padding: 5px;
-   margin: 5px;
    border: 1px solid orange;
  }
  .product-list-setting-btn {
    margin-right: 24px;
  }
 
- /* make the sort  by menu fit */
+ .control-bar-primary {
+   background: rgb(0, 105, 105);
+ }
+
+ /* make the sort  by menu fit to page */
  .dropdown-menu {
    min-width: unset;
  }
