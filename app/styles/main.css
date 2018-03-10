@@ -62,6 +62,14 @@ Layout Styles
   
 }
 
+@media (min-width: 768px) {
+  .container {  
+    /* avoid horizontal scrolling */
+    width: unset; 
+  }
+}
+
+
 /***************************
 ****************************
 Theme Styles
