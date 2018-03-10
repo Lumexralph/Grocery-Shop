@@ -5,9 +5,9 @@
         <!-- toggle for product in stock -->
           <button type="button" class="btn btn-primary" ng-model="main.toggleOn" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">In-Stock Only</button>
       </div>
-      <div class="col-xs-12 col-sm-3 col-md-3">Display Quantity</div>
-      <div class="col-xs-12 col-sm-3 col-md-3">Display Category Name</div>
-      <div class="col-xs-12 col-sm-3 col-md-3">
+      <div class="col-xs-12 col-sm-3 col-md-3 control-bar-display">Display Quantity</div>
+      <div class="col-xs-12 col-sm-3 col-md-3 control-bar-display">Display Category Name</div>
+      <div class="col-xs-12 col-sm-3 col-md-3 btn-sortby">
         <!-- ui bootstrap dropdown button -->
           <div class="btn-group" uib-dropdown is-open="shop.status.isOpen">
               <button id="single-button" type="button" class="btn btn-secondary" uib-dropdown-toggle ng-disabled="disabled">
@@ -55,7 +55,12 @@
               <div class="row">
                 <!-- to achieve display of product in pairs -->
                 <div class="category-product-list-display">
-                  <div class="col-xs-12 category-product-list product-on-left">Product 1</div>
+                  <div class="col-xs-12 category-product-list product-on-left">
+                    <div class="category-product-image">
+                        <img class="img-responsive center-block" src="images/a.jpg">
+                    </div>
+                    <div class="category-product-image-details">Details and button</div>
+                  </div>
                   <div class="col-xs-12 category-product-list">Product 2</div>
                 </div>
                 <div class="category-product-list-display">
