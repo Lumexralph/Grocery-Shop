@@ -85,9 +85,6 @@ Theme Styles
   background: rgb(6, 117, 117);
 }
 .main-secondary {
-  background: rgb(238, 238, 238);
-}
-.main-secondary {
   background: rgb(158, 183, 183);
 }
 
@@ -339,9 +336,10 @@ Shopping Page
 .category-product-image-details {
   width: 30%;
   border: 1px solid green;
+  text-align: center;
 }
-.category-product-btn {
-
+.add-product-btn {
+  border-radius: 3px;
 }
  
  
