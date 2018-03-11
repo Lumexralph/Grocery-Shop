@@ -14,4 +14,4 @@ app.get('/welcome', (req, res) => res.json({
   message: 'Welcome to Module 2 Homework'
 }))
 
-app.listen(8080, () => console.log('Our app is listening on port 8080...'));
+app.listen(3000, () => console.log('Our app is listening on port 8080...'));
