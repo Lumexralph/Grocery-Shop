@@ -82,7 +82,7 @@ Theme Styles
 
 /* main body */
 .main-primary {
-  background: rgb(6, 117, 117);
+  background: rgb(26, 126, 126);
 }
 .main-secondary {
   background: rgb(158, 183, 183);
@@ -377,3 +377,21 @@ Shopping Page
     text-align: center;
   }
 }
+
+/***************************
+****************************
+Product Page
+****************************
+***************************/
+.product {
+  height: 300px;
+  padding: 10px;
+}
+.product-image {
+
+}
+.product-features {
+
+}
+
+
