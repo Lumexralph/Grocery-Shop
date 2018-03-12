@@ -340,6 +340,11 @@ Shopping Page
 }
 .add-product-btn {
   border-radius: 3px;
+  color: rgb(246, 247, 246);
+  font-weight: bold;
+}
+.add-product-btn:hover {
+  color: unset;
 }
  
  
