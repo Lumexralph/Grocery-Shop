@@ -38,6 +38,9 @@ angular
         controller: 'ShopController',
         controllerAs: 'shop'
       })
+      .when('/product/', {
+        templateUrl: 'views/product.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
