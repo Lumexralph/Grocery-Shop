@@ -386,12 +386,42 @@ Product Page
 .product {
   height: 300px;
   padding: 10px;
+  overflow: hidden;
+  position: relative;
 }
 .product-image {
-
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
 }
-.product-features {
+.product-feature {
+  background: white;
+  height: 30px;
+  margin: 10px 0px;
+  padding: auto;
+}
+.product-description-feature {
+  height: 100px;
+  width: 150px;
+  padding: 30px;
+  margin: auto auto 10px auto;
+}
+.product-quantity-feature {
+  max-width: 40px;
+}
+.product-add-to-cart-btn {
+  margin-top: 30px;
+}
 
+/* for desktop */
+
+@media (min-width: 48em) {
+  .product {
+    height: 450px;
+  }
 }
 
 
