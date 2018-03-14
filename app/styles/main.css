@@ -415,6 +415,9 @@ Product Page
 .product-add-to-cart-btn {
   margin-top: 30px;
 }
+.cart-summary {
+  background: rgb(0, 143, 143);
+}
 
 /* for desktop */
 
