@@ -15,6 +15,7 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
+  <base href="/" />
 </head>
 
 <body>
@@ -28,13 +29,13 @@
       <nav class="nav header-nav">
         <ul class="link">
           <li class="nav-link">
-            <a class="header-nav-primary header-secondary header-secondary-nav" href="">Home</a>
+            <a class="header-nav-primary header-secondary header-secondary-nav" href="/">Home</a>
           </li>
           <li class="nav-link">
-            <a class="header-secondary header-secondary-nav" href="">Products</a>
+            <a class="header-secondary header-secondary-nav" href="/product">Products</a>
           </li>
           <li class="nav-link">
-            <a class="header-secondary header-secondary-nav" href="">Shop</a>
+            <a class="header-secondary header-secondary-nav" href="/shop">Shop</a>
           </li>
           <li class="cart">
             <a class="header-secondary header-secondary-nav" href="">Cart</a>
@@ -60,7 +61,9 @@
 
   <footer class="footer footer-primary footer-text">
     <div class="container">
-      <div class="row">CompanyName/Logo</div>
+      <div class="row">
+        <div class="col-xs-12"></div>
+      </div>
       <div class="row">email</div>
       <div class="row">
         <div class="col-xs-12 col-md-6" col-lg-6><a href="#">About Us</a></div>
@@ -119,6 +122,7 @@
   <script src="scripts/controllers/main.js"></script>
   <script src="scripts/service/mainService.js"></script>
   <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/shopController.js"></script>
   <!-- endbuild -->
 </body>
 
