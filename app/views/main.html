@@ -8,7 +8,7 @@
       </div>
       <div uib-carousel active="main.active" interval="main.toggleOn ? 5000 : 0;" class="carousel-inner" role="listbox">
         <div uib-slide ng-repeat="slide in main.imageSrc" index="$index" ng-class="{active : $first}">
-          <img class="img-responsive center-block" ng-src="{{slide}}" style="margin:auto;">
+          <img class="img-responsive center-block" ng-src="{{slide.imagelink}}" style="margin:auto;">
           <div class="carousel-caption">
             <h1>An image</h1>
             <p>It's description</p>
@@ -22,7 +22,7 @@
 <section class="btn-section">
   <div class="container">
     <div class="row">
-            <button class="button btn-secondary">Shop All</button>
+            <button class="button btn-secondary"><a href="/shop">Shop All</a></button>
     </div>
   </div>
 </section>

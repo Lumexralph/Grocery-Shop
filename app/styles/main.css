@@ -125,6 +125,10 @@ Modules
   border-radius: 4px;
   transition: all 0.3s ease 0s;
 }
+.button > a {
+  text-decoration: none;
+  color: unset;
+}
 .btn-section {
   color: rgb(238, 238, 238);
   height: 100px;
