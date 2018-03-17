@@ -41,53 +41,63 @@
           <div class="row">
             <div class="category-top">
               <div class="col-xs-12 category-top-column">
-                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                          <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              Collapsible Group Item #1
+                  <!-- Accordion for categories -->
+                  <div ng-controller="AccordionDemoCtrl">
+                      <script type="text/ng-template" id="group-template.html">
+                        <div class="panel-heading">
+                          <h4 class="panel-title" style="color:#fa39c3">
+                            <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+                              <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+                                {{heading}}
+                              </span>
                             </a>
                           </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                          <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                          </div>
+                        <div class="panel-collapse collapse" uib-collapse="!isOpen">
+                          <div class="panel-body" style="text-align: right" ng-transclude></div>
                         </div>
+                      </script>
+                    
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" ng-model="oneAtATime">
+                          Open only one at a time
+                        </label>
                       </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingTwo">
-                          <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Collapsible Group Item #2
-                            </a>
-                          </h4>
+                      <uib-accordion close-others="oneAtATime">
+                        <div uib-accordion-group class="panel-default" heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                          This content is straight in the template.
                         </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                          <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                          </div>
+                        <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in groups">
+                          {{group.content}}
                         </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                          <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Collapsible Group Item #3
-                            </a>
-                          </h4>
+                        <div uib-accordion-group class="panel-default" heading="Dynamic Body Content">
+                          <p>The body of the uib-accordion group grows to fit the contents</p>
+                          <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+                          <div ng-repeat="item in items">{{item}}</div>
                         </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                          <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                          </div>
+                        <div uib-accordion-group class="panel-default" heading="Custom template" template-url="group-template.html">
+                          Hello
                         </div>
-                      </div>
+                        <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" template-url="group-template.html">
+                          <uib-accordion-heading>
+                            Custom template with custom header template <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}"></i>
+                          </uib-accordion-heading>
+                          World
+                        </div>
+                        <div uib-accordion-group class="panel-danger" heading="Delete account">
+                          <p>Please, to delete your account, click the button below</p>
+                          <button class="btn btn-danger">Delete</button>
+                        </div>
+                        <div uib-accordion-group class="panel-default" is-open="status.open">
+                          <uib-accordion-heading>
+                            I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                          </uib-accordion-heading>
+                          This is just some content to illustrate fancy headings.
+                        </div>
+                      </uib-accordion>
                     </div>
               </div>
-              <div class="col-xs-12 category-top-column">Category Heading 2</div>
-              <div class="col-xs-12 category-top-column">Category Heading 2</div>
             </div>
           </div>
         </div>

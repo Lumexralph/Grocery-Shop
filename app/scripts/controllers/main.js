@@ -13,24 +13,35 @@ angular.module('mod2LabApp')
       this.active = 0;
       this.toggleOn = 1;
       this.imageSrc = [];
-
+      this.randomNumber = function() {
+        return Math.floor((Math.random() * this.imageSrc.length));
+      };
       // handle
 
       mainService.message().then(result => {
-        let dataLength = result.data.length - 1;
-        let subcategoryLength = result.data[dataLength].subcategories.length - 1;
-        let itemLength = result.data[dataLength].subcategories[subcategoryLength].items.length - 1;
-
-        let subcategoryIndex = Math.round(Math.random() * subcategoryLength);
-        let itemIndex = Math.round(Math.random() * itemLength);
-
-
+        let data = result.data;
+               
         // generate items for the carousel imageSrc array
-        for (let i = 0; i <= dataLength; i++) {
-          let item = result.data[i].subcategories[subcategoryIndex].items[itemIndex];
+        for (let i = 0, j = 0; j < 9; j++, i++) {
 
-          this.imageSrc.push(item);
+          i = i < data.length ? i : 0;
+          let subcategory = data[i].subcategories;
+
+          let items = subcategory[Math.round(Math.random() * (subcategory.length - 1))].items;
+          console.log(items);
+          // if items exist in the category
+          if(items[0]) {
+            // check the length of item
+            let itemsLength = items.length;
+            let item = items[Math.round(Math.random() * (items.length - 1))];
+
+            // add item for image carousel
+            this.imageSrc.push(item);
+          }
+          
         }
+       
+        
         console.log(this.imageSrc);
       });
 
