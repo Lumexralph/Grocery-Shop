@@ -8,18 +8,20 @@
  * Controller of the mod2LabApp
  */
 angular.module('mod2LabApp')
-  .controller('MainCtrl', ['MainService',
-    function (mainService) {
+  .controller('MainCtrl', [ 'MainService','$scope',
+    function (mainService, $scope) {
+      this.data = [];
       this.active = 0;
       this.toggleOn = 1;
       this.imageSrc = [];
       this.randomNumber = function() {
         return Math.floor((Math.random() * this.imageSrc.length));
       };
-      // handle
 
       mainService.message().then(result => {
-        let data = result.data;
+        this.data = result.data;
+        console.log('data from mainController', this.data);
+        let data = this.data;
                
         // generate items for the carousel imageSrc array
         for (let i = 0, j = 0; j < 9; j++, i++) {

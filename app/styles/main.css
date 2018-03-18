@@ -274,11 +274,6 @@ Shopping Page
   border: 1px solid black;
   padding: 5px;
  }
- .category-top {
-  border: 1px solid black;
-  padding: 5px;
-  margin: 2px;
- }
  .category-top-column {
   border: 1px solid brown;
   margin: 2px 0;
@@ -361,7 +356,7 @@ Shopping Page
     width: 100%; 
   }
   .category-product-list-display {
-    display: flex;
+    /* display: flex; */
     padding: 5px;
     margin: 5px;
   }
