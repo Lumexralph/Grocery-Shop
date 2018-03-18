@@ -291,7 +291,8 @@ Shopping Page
    display: inline-flex;
  }
  .product-list-setting {
-   padding: 5px;
+   padding-top: 10px;
+   padding-bottom: 10px;
    border: 1px solid orange;
  }
  .product-list-setting-btn {
