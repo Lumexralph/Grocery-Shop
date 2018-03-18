@@ -1,28 +1,38 @@
-
 <section class="main-page-carousel">
   <div class="container">
     <div class="row">
-      <button type="button" class="btn btn-secondary float-right" ng-model="main.toggleOn" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">Toggle Slide Show</button>
+      <button type="button" class="btn btn-secondary float-right" ng-model="main.toggleOn" uib-btn-checkbox btn-checkbox-true="1"
+        btn-checkbox-false="0">Toggle Slide Show</button>
     </div>
     <div class="row">
-      </div>
       <div uib-carousel active="main.active" interval="main.toggleOn ? 5000 : 0;" class="carousel-inner" role="listbox">
         <div uib-slide ng-repeat="slide in main.imageSrc" index="$index" ng-class="{active : $first}">
-          <img class="img-responsive center-block" ng-src="{{slide}}" style="margin:auto;">
-          <div class="carousel-caption">
-            <h1>An image</h1>
-            <p>It's description</p>
-            <!-- <h3>{{slide.publication}}</h3> -->
-          </div>
+          <div class="col-xs-6">
+            <img class="img-responsive center-block" ng-init='rand = randomNumber()' ng-src="{{main.imageSrc[$index + rand].imagelink}}" style="margin:auto;"> </div>
+
+          <div class="col-xs-6">
+            <img class="img-responsive center-block" ng-init='rand = randomNumber()' ng-src="{{main.imageSrc[$index + 1 + rand].imagelink}}" style="margin:auto;"> </div>
+
+          <div class="col-xs-6">
+            <img class="img-responsive center-block" ng-src="{{main.imageSrc[$index + 1].imagelink}}" style="margin:auto;"> </div>
+
+            <div class="col-xs-6">
+                <img class="img-responsive center-block" ng-src="{{main.imageSrc[$index + 3].imagelink}}" style="margin:auto;"> </div>
+
         </div>
       </div>
-    </div>  
-  </section>
+
+    </div>
+
+  </div>
+</section>
 
 <section class="btn-section">
   <div class="container">
     <div class="row">
-            <button class="button btn-secondary">Shop All</button>
+      <button class="button btn-secondary">
+        <a href="/shop">Shop All</a>
+      </button>
     </div>
   </div>
 </section>
