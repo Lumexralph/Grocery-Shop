@@ -12,7 +12,7 @@ function mainService($http, $q) {
   function getMessage() {
     var deferred = $q.defer();
 
-    $http.get('http://localhost:3000/welcome').then((result) => deferred.resolve(result));
+    $http.get('https://webmppcapstone.blob.core.windows.net/data/itemsdata.json').then((result) => deferred.resolve(result));
 
     return deferred.promise;
     

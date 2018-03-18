@@ -8,18 +8,44 @@
  * Controller of the mod2LabApp
  */
 angular.module('mod2LabApp')
-  .controller('MainCtrl', ['MainService', 
-  function (mainService) {
-    this.active = 0;
-    this.toggleOn = 1;
-    this.imageSrc = [
-      'images/a.jpg',
-      'images/b.jpg'
-    ];
+  .controller('MainCtrl', [ 'MainService','$scope',
+    function (mainService, $scope) {
+      this.data = [];
+      this.active = 0;
+      this.toggleOn = 1;
+      this.imageSrc = [];
+      this.randomNumber = function() {
+        return Math.floor((Math.random() * this.imageSrc.length));
+      };
 
-    // handle
+      mainService.message().then(result => {
+        this.data = result.data;
+        console.log('data from mainController', this.data);
+        let data = this.data;
+               
+        // generate items for the carousel imageSrc array
+        for (let i = 0, j = 0; j < 9; j++, i++) {
 
-    mainService.message().then(result => this.message= result.data.message);
-  
-  }
-]);
+          i = i < data.length ? i : 0;
+          let subcategory = data[i].subcategories;
+
+          let items = subcategory[Math.round(Math.random() * (subcategory.length - 1))].items;
+          console.log(items);
+          // if items exist in the category
+          if(items[0]) {
+            // check the length of item
+            let itemsLength = items.length;
+            let item = items[Math.round(Math.random() * (items.length - 1))];
+
+            // add item for image carousel
+            this.imageSrc.push(item);
+          }
+          
+        }
+       
+        
+        console.log(this.imageSrc);
+      });
+
+    }
+  ]);

@@ -41,6 +41,9 @@ angular
       .when('/product/', {
         templateUrl: 'views/product.html'
       })
+      .when('/cart', {
+        templateUrl: 'views/cart.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
