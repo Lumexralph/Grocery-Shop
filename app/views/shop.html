@@ -27,15 +27,22 @@
         <div class="row">
           <div class="col-md-12 product-list-setting control-bar-primary">
             <div class="row">
-              <div class="col-xs-12 col-sm-3">
+              <div class="col-xs-12 col-sm-2">
                 <!-- toggle for product in stock -->
                 <button type="button" class="btn btn-primary" ng-model="shop.toggleOn" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">In-Stock Only</button>
               </div>
               <div class="col-xs-12 col-sm-3">Displaying {{shop.noOfItemsInstock}} out of {{shop.toggleOn ? shop.noOfItemsInstock : shop.itemInSubcategory.length}}</div>
-              <div class="col-xs-12 col-sm-3">
-                <span ng-bind="shop.category"></span> : <span ng-bind="shop.subcategory"></span>
+              <div class="col-xs-12 col-sm-5">
+                <div class="row">
+                  <div class="col-xs-12">
+                    Category: <span ng-bind="shop.category"></span>
+                  </div>
+                  <div class="col-xs-12">
+                   Subcatgeory: <span ng-bind="shop.subcategory"></span>
+                  </div>
+                </div>
               </div>
-              <div class="col-xs-12 col-sm-3 btn-sortby">
+              <div class="col-xs-12 col-sm-2 btn-sortby">
                 <!-- ui bootstrap dropdown button -->
                 <div class="btn-group" uib-dropdown is-open="shop.status.isOpen">
                   <button id="single-button" type="button" class="btn btn-secondary" uib-dropdown-toggle ng-disabled="disabled">
