@@ -14,8 +14,10 @@
           <uib-accordion close-others="oneAtATime">
             <div uib-accordion-group class="panel-default" heading="{{product.category}}" ng-init="categoryIndex = $index" ng-repeat="product in shop.data">
               <div ng-repeat="subcategory in product.subcategories" ng-init="subcategoryIndex = $index">
+
                 <a href="#" ng-click="shop.getCategory(categoryIndex, subcategoryIndex)">{{subcategory.name}}</a>
               </div>
+              <p>{{itemToDisplay}}</p>
             </div>
           </uib-accordion>
         </div>
@@ -27,9 +29,9 @@
             <div class="row">
               <div class="col-xs-12 col-sm-3">
                 <!-- toggle for product in stock -->
-                <button type="button" class="btn btn-primary" ng-model="main.toggleOn" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">In-Stock Only</button>
+                <button type="button" class="btn btn-primary" ng-model="shop.toggleOn" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">In-Stock Only</button>
               </div>
-              <div class="col-xs-12 col-sm-3">Display Quantity</div>
+              <div class="col-xs-12 col-sm-3">Displaying {{shop.noOfItemsInstock}} out of {{shop.toggleOn ? shop.noOfItemsInstock : shop.itemInSubcategory.length}}</div>
               <div class="col-xs-12 col-sm-3">
                 <span ng-bind="shop.category"></span> : <span ng-bind="shop.subcategory"></span>
               </div>
@@ -61,7 +63,7 @@
           </div>
           <div class="col-md-12">
             <div class="row">
-              <div class="col-sm-3 col-md-3" ng-repeat="item in shop.itemInSubcategory">
+              <div class="col-sm-3 col-md-3" ng-repeat="item in (shop.toggleOn  ? shop.itemsInstock : shop.itemInSubcategory)">
                 <div class="thumbnail">
                   <img ng-src="{{item.imagelink}}" alt="{{item.name}} product image">
                   <div class="caption text-center">
@@ -79,6 +81,5 @@
     </div>
   </div>
   </div>
-  <pre>{{shop.data[0]}}</pre>
-
+  <pre>{{shop.toggleOn}}</pre>
 </section>
