@@ -29,17 +29,6 @@ angular.module('mod2LabApp')
         });
 
         
-        // // get items in stock
-        // function inStock(items) {
-        //   items.forEach(element => {
-        //     // empty the present in stock data
-        //     this.itemsInstock = [];
-        //     if (element.stock > 0) {
-        //       this.itemsInstock.push(element);
-        //     }
-        //   });                 
-        // }
-
         function getCategory(categoryIndex, subcategoryIndex) {
           let presentData = this.data[categoryIndex];
 
