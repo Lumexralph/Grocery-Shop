@@ -6,10 +6,15 @@ angular.module('mod2LabApp')
       this.category = [];
       this.subcategory = [];
       this.itemsInstock = [];
+      this.itemsInstockCopy = [];
       this.noOfItemsInstock = 0;
       this.itemInSubcategory = [];
-      this.getCategory = getCategory;
+      this.itemInSubcategoryCopy = [];
 
+      this.getCategory = getCategory;
+      this.sortByNone = sortByNone;
+      this.sortAlphabetically = sortAlphabetically;
+      this.sortByRating = sortByRating;
 
       // get data to start with
       mainService.message().then(result => {
@@ -22,10 +27,16 @@ angular.module('mod2LabApp')
 
         this.itemInSubcategory = this.data[0].subcategories[0].items;
 
+        // make a copy
+        this.itemInSubcategoryCopy = _.cloneDeep(this.itemInSubcategory);
+        
+
         // to start the count of items at start of program
         this.noOfItemsInstock = countItem(this.itemInSubcategory).noOfItemsAvailable;
 
         this.itemsInstock = countItem(this.itemInSubcategory).itemInStock;
+
+        this.itemsInstockCopy = _.cloneDeep(this.itemsInstock);
 
       });
 
@@ -52,8 +63,12 @@ angular.module('mod2LabApp')
 
         this.itemInSubcategory = presentSubcategoryItem;
 
+        this.itemInSubcategoryCopy = _.cloneDeep(this.itemInSubcategory);
+
         this.itemsInstock = availableItems.itemInStock;
-        
+
+        this.itemsInstockCopy = _.cloneDeep(this.itemsInstock);
+
         this.noOfItemsInstock = availableItems.noOfItemsAvailable;
 
         // reset instock toggle
@@ -71,8 +86,6 @@ angular.module('mod2LabApp')
 
         itemInStock = items.filter(el => el.stock > 0);
 
-        console.log('from countitem function: ', itemInStock);
-
         noOfItemsAvailable = itemInStock.length;
 
         return {
@@ -81,6 +94,26 @@ angular.module('mod2LabApp')
         };
 
       }
+
+      // sorting of products functions
+      function sortByNone(items) {
+        this.toggleOn ? this.itemsInstock = _.cloneDeep(items) : this.itemInSubcategory = _.cloneDeep(items);
+        
+        console.log('sort by none', this.itemsInstockCopy, this.itemInSubcategoryCopy);
+        console.log(this.itemsInstock, this.itemInSubcategory);        
+      }
+
+      function sortAlphabetically(items) {
+        items.sort((a, b) => a.name > b.name); 
+        console.log('sorted alphabetically', items);
+      }
+
+      function sortByRating(items) {
+        items.sort((a, b) => Number(b.rating) - Number(a.rating)); 
+        console.log('sorted alphabetically', items);
+      }
+
+      
     }
   ]);
 

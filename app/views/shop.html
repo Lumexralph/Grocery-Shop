@@ -31,7 +31,7 @@
                 <!-- toggle for product in stock -->
                 <button type="button" class="btn btn-primary" ng-model="shop.toggleOn" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">In-Stock Only</button>
               </div>
-              <div class="col-xs-12 col-sm-3">Displaying {{shop.noOfItemsInstock}} out of {{shop.toggleOn ? shop.noOfItemsInstock : shop.itemInSubcategory.length}}</div>
+              <div class="col-xs-12 col-sm-3"> {{shop.noOfItemsInstock}} items  out of {{shop.toggleOn ? shop.noOfItemsInstock : shop.itemInSubcategory.length}} total items</div>
               <div class="col-xs-12 col-sm-5">
                 <div class="row">
                   <div class="col-xs-12">
@@ -51,16 +51,16 @@
                   </button>
                   <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                     <li role="menuitem">
-                      <a href="#">None</a>
+                      <a href="#" ng-click="shop.toggleOn ? shop.sortByNone(shop.itemsInstockCopy) : shop.sortByNone(shop.itemInSubcategoryCopy)">None</a>
                     </li>
                     <li role="menuitem">
                       <a href="#">Price</a>
                     </li>
                     <li role="menuitem">
-                      <a href="#">Alphabetical</a>
+                      <a href="#" ng-click="shop.toggleOn ? shop.sortAlphabetically(shop.itemsInstock) : shop.sortAlphabetically(shop.itemInSubcategory)">Alphabetical</a>
                     </li>
                     <li role="menuitem">
-                      <a href="#">Rating</a>
+                      <a href="#" ng-click="shop.toggleOn ? shop.sortByRating(shop.itemsInstock) : shop.sortByRating(shop.itemInSubcategory)">Rating</a>
                     </li>
                   </ul>
 
