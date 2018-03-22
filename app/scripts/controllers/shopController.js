@@ -15,6 +15,7 @@ angular.module('mod2LabApp')
       this.sortByNone = sortByNone;
       this.sortAlphabetically = sortAlphabetically;
       this.sortByRating = sortByRating;
+      this.sortByPrice = sortByPrice;
 
       // get data to start with
       mainService.message().then(result => {
@@ -110,6 +111,11 @@ angular.module('mod2LabApp')
 
       function sortByRating(items) {
         items.sort((a, b) => Number(b.rating) - Number(a.rating)); 
+        console.log('sorted alphabetically', items);
+      }
+
+      function sortByPrice(items) {
+        items.sort((a, b) => Number.parseFloat(b.price) - Number.parseFloat(a.price)); 
         console.log('sorted alphabetically', items);
       }
 
