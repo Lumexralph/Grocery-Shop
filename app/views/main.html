@@ -7,18 +7,7 @@
     <div class="row">
       <div uib-carousel active="main.active" interval="main.toggleOn ? 5000 : 0;" class="carousel-inner" role="listbox">
         <div uib-slide ng-repeat="slide in main.imageSrc" index="$index" ng-class="{active : $first}">
-          <div class="col-xs-6">
-            <img class="img-responsive center-block" ng-init='rand = randomNumber()' ng-src="{{main.imageSrc[$index + rand].imagelink}}" style="margin:auto;"> </div>
-
-          <div class="col-xs-6">
-            <img class="img-responsive center-block" ng-init='rand = randomNumber()' ng-src="{{main.imageSrc[$index + 1 + rand].imagelink}}" style="margin:auto;"> </div>
-
-          <div class="col-xs-6">
-            <img class="img-responsive center-block" ng-src="{{main.imageSrc[$index + 1].imagelink}}" style="margin:auto;"> </div>
-
-            <div class="col-xs-6">
-                <img class="img-responsive center-block" ng-src="{{main.imageSrc[$index + 3].imagelink}}" style="margin:auto;"> </div>
-
+            <img class="img-responsive center-block"  ng-src="{{slide.imagelink}}" style="margin:auto;"> 
         </div>
       </div>
 
