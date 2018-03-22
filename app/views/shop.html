@@ -72,9 +72,11 @@
             <div class="row">
               <div class="col-sm-3 col-md-3" ng-repeat="item in (shop.toggleOn  ? shop.itemsInstock : shop.itemInSubcategory)">
                 <div class="thumbnail">
-                  <img ng-src="{{item.imagelink}}" alt="{{item.name}} product image">
+                  <a href="#">
+                    <img ng-src="{{item.imagelink}}" alt="{{item.name}} product image">
                   <div class="caption text-center">
                     <h3>{{item.name}}</h3>
+                  </a>
                     <p># {{item.price}}</p>
                     <a href="#" class="btn btn-primary" role="button">Add</a>
                   </div>
@@ -88,5 +90,4 @@
     </div>
   </div>
   </div>
-  <pre>{{shop.toggleOn}}</pre>
 </section>
