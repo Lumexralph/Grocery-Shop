@@ -39,7 +39,10 @@ angular
         controllerAs: 'shop'
       })
       .when('/product', {
-        templateUrl: 'views/product.html'
+        templateUrl: 'views/product.html',
+        controller: 'ProductController',
+        controllerAs: 'prod'
+
       })
       .when('/cart', {
         templateUrl: 'views/cart.html'
