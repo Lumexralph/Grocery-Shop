@@ -5,9 +5,10 @@ angular.module('mod2LabApp')
     function (mainService, $routeParams) {
 
       this.params = $routeParams;
-      this.product;
+      this.quantity = 1;
+      this.addItemToCart = addItemToCart;
 
-      console.log('param',this.params);
+      console.log(this.quantity);
 
       let allProducts = [];
 
@@ -28,6 +29,34 @@ angular.module('mod2LabApp')
         console.log('data from ProductController', this.product);
       }
     );
+
+    function addItemToCart(item) {
+      let quantity = this.quantity;
+      console.log(quantity);
+
+      let cart = JSON.parse(localStorage.getItem('cartItems'));
+
+      let productExistIndex = cart.findIndex(element => element.name === item.name);
+      
+
+      // check if product exists
+      if (productExistIndex >= 0) {
+          // get that product
+          cart[productExistIndex].quantity = cart[productExistIndex].quantity + quantity;
+          
+          // update the localStorage
+          localStorage.setItem('cartItems', JSON.stringify(cart));
+
+      } else {
+        item.quantity = quantity;
+        cart.push(item);
+
+        // update the localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cart));
+      }       
+
+      console.log(cart, Array.isArray(cart), item);      
+    }
       
     }
   ]);
