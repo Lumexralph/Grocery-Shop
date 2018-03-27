@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="table-responsive">
             <table class="table">
-                <thead>
+                
                   <tr>
                     <th>Items</th>
                     <th>Details</th>
@@ -11,19 +11,19 @@
                     <th>Quantity</th>
                     <th>Total</th>
                   </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td scope="row">1</td>
-                    <td>Apple</td>
-                    <td>$30</td>
-                    <td>2</td>
-                    <td>$60</td>
+               
+                
+                  <tr ng-repeat="item in cart.cartItems">
+                    <td scope="row">{{$index + 1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td ng-init="cart.calculateTotal((item.price * item.quantity))">{{item.price * item.quantity}}</td>
                   </tr>
-                </tbody>
+               
               </table>
         </div>
-        <h4 class="float-right">Subtotal <span class="cart-summary cart-summary-subtotal">$100</span></h4>
+        <h4 class="float-right">Subtotal <span class="cart-summary cart-summary-subtotal">{{cart.total}}</span></h4>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 cart-summary">
         <div class="">
