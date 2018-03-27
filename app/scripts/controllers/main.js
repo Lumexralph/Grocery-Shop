@@ -18,6 +18,12 @@ angular.module('mod2LabApp')
       //   return Math.floor((Math.random() * this.imageSrc.length));
       // };
 
+      let cart = JSON.parse(localStorage.getItem('cartItems'));
+
+      if (!cart) {
+        localStorage.setItem('cartItems', JSON.stringify([]));      
+      }
+
       mainService.message().then(result => {
         this.data = result.data;
         console.log('data from mainController', this.data);

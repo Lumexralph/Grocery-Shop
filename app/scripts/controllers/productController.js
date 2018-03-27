@@ -10,6 +10,13 @@ angular.module('mod2LabApp')
 
       console.log(this.quantity);
 
+      // check if cart exists or initialize
+      let cartProduct = JSON.parse(localStorage.getItem('cartItems'));
+
+      if (!cartProduct) {
+        localStorage.setItem('cartItems', JSON.stringify([]));      
+      }
+
       let allProducts = [];
 
       // inject data from API

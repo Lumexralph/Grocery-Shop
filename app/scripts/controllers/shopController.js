@@ -18,6 +18,13 @@ angular.module('mod2LabApp')
       this.sortByPrice = sortByPrice;
       this.addItemToCart = addItemToCart;
 
+      // check if cart exists or initialize
+      let cartProduct = JSON.parse(localStorage.getItem('cartItems'));
+
+      if (!cartProduct) {
+        localStorage.setItem('cartItems', JSON.stringify([]));      
+      }
+
       // get data to start with
       mainService.message().then(result => {
 
