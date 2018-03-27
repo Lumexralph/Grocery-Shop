@@ -16,6 +16,7 @@ angular.module('mod2LabApp')
       this.sortAlphabetically = sortAlphabetically;
       this.sortByRating = sortByRating;
       this.sortByPrice = sortByPrice;
+      this.addItemToCart = addItemToCart;
 
       // get data to start with
       mainService.message().then(result => {
@@ -119,6 +120,33 @@ angular.module('mod2LabApp')
         console.log('sorted alphabetically', items);
       }
 
+      // add item to cart
+      function addItemToCart(item) {
+        let quantity = 1;
+  
+        let cart = JSON.parse(localStorage.getItem('cartItems'));
+  
+        let productExistIndex = cart.findIndex(element => element.name === item.name);
+        
+  
+        // check if product exists
+        if (productExistIndex >= 0) {
+            // get that product
+            cart[productExistIndex].quantity = cart[productExistIndex].quantity + quantity;
+            
+            // update the localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+  
+        } else {
+          item.quantity = quantity;
+          cart.push(item);
+  
+          // update the localStorage
+          localStorage.setItem('cartItems', JSON.stringify(cart));
+        }       
+  
+        console.log(cart, Array.isArray(cart), item);      
+      }
       
     }
   ]);
