@@ -9,9 +9,9 @@
                     <th>Image</th>
                     <th>Details</th>
                     <th>Price</th>
-                    <th>Quantity</th>
-                    <th></th>
+                    <th>Quantity</th>       
                     <th>Total</th>
+                    <th></th>
                   </tr>
                
                 
@@ -20,9 +20,9 @@
                     <td class="cart-table-img"><img class="img-thumbnail" ng-src="{{item.imagelink}}" alt=""></td>
                     <td>{{item.name}}</td>
                     <td>${{item.price}}</td>
-                    <td>{{item.quantity}}</td>
-                    <td><button class="btn btn-danger" ng-click="cart.removeItemFromCart($index, item.price, item.quantity)">Delete</button></td>
+                    <td>{{item.quantity}}</td>                   
                     <td>${{cart.totalCostOfItem(item.price, item.quantity)}}</td>
+                    <td><button class="btn btn-danger" ng-click="cart.removeItemFromCart($index, item.price, item.quantity)">Delete</button></td>
                   </tr>
                
               </table>
