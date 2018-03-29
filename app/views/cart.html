@@ -17,7 +17,7 @@
                 
                   <tr ng-init="cart.calculateTotal()" ng-repeat="item in cart.cartItems">
                     <td scope="row">{{$index + 1}}</td>
-                    <td class="cart-table-img"><img ng-src="{{item.imagelink}}" alt=""></td>
+                    <td class="cart-table-img"><img class="img-thumbnail" ng-src="{{item.imagelink}}" alt=""></td>
                     <td>{{item.name}}</td>
                     <td>${{item.price}}</td>
                     <td>{{item.quantity}}</td>
