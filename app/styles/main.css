@@ -433,12 +433,12 @@ Product Page
 }
 .cart-summary-text > h5 {
   background:whitesmoke; 
-  flex: 1;
+  flex: 2;
   margin-right: 5px;
 }
 .cart-summary-text > h6 {
-  background:whitesmoke; 
-  flex: 2;
+  /* background:whitesmoke;  */
+  flex: 1;
 }
 .cart-summary-text > h5, .cart-summary-text > h6 {
   height: 25px;
