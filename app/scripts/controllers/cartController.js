@@ -10,6 +10,9 @@ function cartOperations() {
   this.removeItemFromCart = removeItemFromCart;
   this.totalCostOfItem = totalCostOfItem;
   this.total  = 0;
+  this.shippingCost = 10;
+  this.tax = 10;
+  this.sumAlltotal = 0; 
 
   if (!this.cartItems) {
     localStorage.setItem('cartItems', JSON.stringify([]));
@@ -33,6 +36,11 @@ function calculateTotal() {
 
   // update total price
   this.total =  precisionRound(totalPrice, 2);
+
+  // calculate the whole total
+  let totalWithAdditionalCost = (this.total + ((this.total * this.tax) / 100) ) + this.shippingCost;
+
+  this.sumAlltotal = precisionRound(totalWithAdditionalCost, 2);
   // let num = this.total + subtotal;
 
   // this.total = Math.round((num + 0.00001) * 100) / 100;

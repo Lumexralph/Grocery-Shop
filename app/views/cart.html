@@ -54,13 +54,13 @@
                         </div>
                     </form>
               </div>
-              <div class="cart-summary-text"><h5>Shipping Cost</h5><h6>cost</h6>
+              <div class="cart-summary-text"><h5 >Subtotal</h5><h6>${{cart.total}}</h6>
+              </div>
+              <div class="cart-summary-text"><h5>Shipping Cost</h5><h6>${{cart.shippingCost}}</h6>
               </div>             
-              <div class="cart-summary-text"><h5 >Subtotal</h5><h6>total display</h6>
+              <div class="cart-summary-text"><h5>Tax</h5><h6>{{cart.tax}}%</h6>
               </div>
-              <div class="cart-summary-text"><h5>Tax</h5><h6>total tax</h6>
-              </div>
-              <div class="cart-summary-text"><h5>Total</h5><h6>total cost</h6>
+              <div class="cart-summary-text"><h5>Total</h5><h6>${{cart.sumAlltotal}}</h6>
               </div>              
             </div>
           </div>
