@@ -19,15 +19,15 @@
                     <td scope="row">{{$index + 1}}</td>
                     <td class="cart-table-img"><img ng-src="{{item.imagelink}}" alt=""></td>
                     <td>{{item.name}}</td>
-                    <td>{{item.price}}</td>
+                    <td>${{item.price}}</td>
                     <td>{{item.quantity}}</td>
                     <td><button class="btn btn-danger" ng-click="cart.removeItemFromCart($index, item.price, item.quantity)">Delete</button></td>
-                    <td>{{cart.totalCostOfItem(item.price, item.quantity)}}</td>
+                    <td>${{cart.totalCostOfItem(item.price, item.quantity)}}</td>
                   </tr>
                
               </table>
         </div>
-        <h4 class="float-right">Subtotal <span class="cart-summary cart-summary-subtotal">{{cart.total}}</span></h4>
+        <h4 class="float-right">Subtotal <span class="cart-summary cart-summary-subtotal">${{cart.total}}</span></h4>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 cart-summary">
         <div class="">
