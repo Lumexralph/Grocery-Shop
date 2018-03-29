@@ -9,16 +9,18 @@
                     <th>Details</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                    <th></th>
                     <th>Total</th>
                   </tr>
                
                 
-                  <tr ng-repeat="item in cart.cartItems">
+                  <tr ng-init="cart.calculateTotal()" ng-repeat="item in cart.cartItems">
                     <td scope="row">{{$index + 1}}</td>
                     <td>{{item.name}}</td>
                     <td>{{item.price}}</td>
                     <td>{{item.quantity}}</td>
-                    <td ng-init="cart.calculateTotal((item.price * item.quantity))">{{item.price * item.quantity}}</td>
+                    <td><button ng-click="cart.removeItemFromCart($index, item.price, item.quantity)">Remove</button></td>
+                    <td>{{cart.totalCostOfItem(item.price, item.quantity)}}</td>
                   </tr>
                
               </table>

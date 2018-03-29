@@ -7,6 +7,8 @@ function cartOperations() {
   this.cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
   this.calculateTotal = calculateTotal;
+  this.removeItemFromCart = removeItemFromCart;
+  this.totalCostOfItem = totalCostOfItem;
   this.total  = 0;
 
   if (!this.cartItems) {
@@ -16,7 +18,57 @@ function cartOperations() {
   console.log('from cart', Array.isArray(JSON.parse(localStorage.getItem('cartItems'))));
 }
 
-function calculateTotal(subtotal) {
-  this.total += subtotal;
-  console.log(this.total);
+function totalCostOfItem(price, quantity) {
+  let total = price  * quantity;
+
+  // to 2 decimal places
+   return precisionRound(total, 2);
+
+}
+
+function calculateTotal() {
+  let items = JSON.parse(localStorage.getItem('cartItems'));
+
+  let totalPrice = items.reduce((a, b) => a + (Number(b.price) * Number(b.quantity)), 0);
+
+  // update total price
+  this.total =  precisionRound(totalPrice, 2);
+  // let num = this.total + subtotal;
+
+  // this.total = Math.round((num + 0.00001) * 100) / 100;
+
+  // console.log('from calc total :', this.total);
+  // console.log('from calc justNum :', justNum);
+}
+
+function removeItemFromCart(index, price, quantity) {
+  // // reset the total because localStorage
+  // // cartitems array will change and total recalculated
+  // this.total = 0;
+  // let presentItemCost = this.totalCostOfItem(price, quantity);
+
+  // // as items are removed, it should be duducted from total
+  // this.total = this.total - presentItemCost;
+
+  let items = JSON.parse(localStorage.getItem('cartItems'));
+
+  // remove that item from table
+  items.splice(index, 1);
+
+   // update the localStorage
+   localStorage.setItem('cartItems', JSON.stringify(items));
+
+   this.cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+  //  update total
+  this.calculateTotal();
+
+   console.log('from remove item :', this.total);
+  
+}
+
+// put value in decimal places
+function precisionRound(number, precision) {
+  var factor = Math.pow(10, precision);
+  return Math.round(number * factor) / factor;
 }
