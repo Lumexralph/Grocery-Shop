@@ -19,7 +19,7 @@
                     <td>{{item.name}}</td>
                     <td>{{item.price}}</td>
                     <td>{{item.quantity}}</td>
-                    <td><button ng-click="cart.removeItemFromCart($index, item.price, item.quantity)">Remove</button></td>
+                    <td><button class="btn btn-danger product-add-to-cart-btn" ng-click="cart.removeItemFromCart($index, item.price, item.quantity)">Remove</button></td>
                     <td>{{cart.totalCostOfItem(item.price, item.quantity)}}</td>
                   </tr>
                
