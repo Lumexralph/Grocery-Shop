@@ -414,6 +414,9 @@ Product Page
   margin: 10px 0;
   font-weight: bold;
 }
+
+
+
 .cart-summary {
   background: rgb(0, 143, 143);
 }
@@ -445,6 +448,11 @@ Product Page
   padding: 5px;
   border: 1px solid powderblue;
   border-radius: 5%;
+}
+
+.cart-table-img > img {
+  height: 80px;
+  width: 80px;
 }
 
 /* for desktop */

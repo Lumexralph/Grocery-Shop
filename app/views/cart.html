@@ -6,6 +6,7 @@
                 
                   <tr>
                     <th>Items</th>
+                    <th>Image</th>
                     <th>Details</th>
                     <th>Price</th>
                     <th>Quantity</th>
@@ -16,10 +17,11 @@
                 
                   <tr ng-init="cart.calculateTotal()" ng-repeat="item in cart.cartItems">
                     <td scope="row">{{$index + 1}}</td>
+                    <td class="cart-table-img"><img ng-src="{{item.imagelink}}" alt=""></td>
                     <td>{{item.name}}</td>
                     <td>{{item.price}}</td>
                     <td>{{item.quantity}}</td>
-                    <td><button class="btn btn-danger product-add-to-cart-btn" ng-click="cart.removeItemFromCart($index, item.price, item.quantity)">Remove</button></td>
+                    <td><button class="btn btn-danger" ng-click="cart.removeItemFromCart($index, item.price, item.quantity)">Delete</button></td>
                     <td>{{cart.totalCostOfItem(item.price, item.quantity)}}</td>
                   </tr>
                
