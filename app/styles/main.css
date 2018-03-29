@@ -440,7 +440,8 @@ Product Page
   margin-right: 5px;
 }
 .cart-summary-text > h6 {
-  /* background:whitesmoke;  */
+  color: powderblue;
+  font-weight: 600;
   flex: 1;
 }
 .cart-summary-text > h5, .cart-summary-text > h6 {
@@ -448,6 +449,14 @@ Product Page
   padding: 5px;
   border: 1px solid powderblue;
   border-radius: 5%;
+}
+
+.cart-summary-total {
+  font-size: large;
+  font-weight: 600;
+}
+.cart-summary-total + h6 {
+  color: whitesmoke;
 }
 
 .cart-table-img > img {
