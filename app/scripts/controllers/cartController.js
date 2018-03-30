@@ -9,10 +9,14 @@ function cartOperations() {
   this.calculateTotal = calculateTotal;
   this.removeItemFromCart = removeItemFromCart;
   this.totalCostOfItem = totalCostOfItem;
+  this.checkoutOperation = checkoutOperation;
+
+  this.shippingDetails = {};
   this.total  = 0;
   this.shippingCost = 10;
   this.tax = 10;
-  this.sumAlltotal = 0; 
+  this.sumAlltotal = 0;
+  this.checkout = false; 
 
   if (!this.cartItems) {
     localStorage.setItem('cartItems', JSON.stringify([]));
@@ -79,4 +83,9 @@ function removeItemFromCart(index, price, quantity) {
 function precisionRound(number, precision) {
   var factor = Math.pow(10, precision);
   return Math.round(number * factor) / factor;
+}
+
+// handle user checkout
+function checkoutOperation() {
+  this.checkout = true;
 }
