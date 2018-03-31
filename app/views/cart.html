@@ -45,7 +45,7 @@
                       <div class="form-group">
                           <label for="InputUsername">Username</label>
                           <input type="text" class="form-control" placeholder="Username" name="user"
-                          ng-model="cart.shippingDetails.username" required>
+                          ng-model="cart.shippingDetails.user" required>
                           <span style="color:rgb(205, 228, 231)" ng-show="myForm.user.$dirty && myForm.user.$invalid">
                               <span ng-show="myForm.user.$error.required">Username is required.</span>
                         </div>
@@ -70,7 +70,7 @@
                           
                         </div>
                         <!-- handle form validation -->
-          <button type="button" class="btn btn-primary product-add-to-cart-btn float-right" ng-if="cart.checkout" ng-disabled="(myForm.user.$touched || myForm.user.$untouched || myForm.user.$dirty) && myForm.user.$invalid || (myForm.address.$touched || myForm.address.$untouched || myForm.address.$dirty) && myForm.address.$invalid || (myForm.city.$touched || myForm.city.$untouched || myForm.city.$dirty) && myForm.city.$invalid || (myForm.phonenumber.$touched || myForm.phonenumber.$untouched || myForm.phonenumber.$dirty) && myForm.phonenumber.$invalid" ng-click="">Check Out</button>
+          <button type="button" class="btn btn-primary product-add-to-cart-btn float-right" ng-if="cart.checkout" ng-disabled="(myForm.user.$touched || myForm.user.$untouched || myForm.user.$dirty) && myForm.user.$invalid || (myForm.address.$touched || myForm.address.$untouched || myForm.address.$dirty) && myForm.address.$invalid || (myForm.city.$touched || myForm.city.$untouched || myForm.city.$dirty) && myForm.city.$invalid || (myForm.phonenumber.$touched || myForm.phonenumber.$untouched || myForm.phonenumber.$dirty) && myForm.phonenumber.$invalid" ng-click="cart.finalCheckout(cart.shippingDetails)">Check Out</button>
                     </form>
                     
                     

@@ -10,6 +10,7 @@ function cartOperations() {
   this.removeItemFromCart = removeItemFromCart;
   this.totalCostOfItem = totalCostOfItem;
   this.checkoutOperation = checkoutOperation;
+  this.finalCheckout = finalCheckout;
 
   this.shippingDetails = {};
   this.total  = 0;
@@ -88,4 +89,15 @@ function precisionRound(number, precision) {
 // handle user checkout
 function checkoutOperation() {
   this.checkout = true;
+}
+
+// handle checkout after shipping details
+// are correctly filled 
+function finalCheckout(shippingInfo) {
+  
+  alert(`Username: ${shippingInfo.user}\n
+         Address: ${shippingInfo.address}\n
+         City: ${shippingInfo.city}\n
+         Phonenumber: ${shippingInfo.phonenumber}\n`);
+
 }
