@@ -33,7 +33,7 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/shop/', {
+      .when('/shopping/', {
         templateUrl: 'views/shop.html',
         controller: 'ShopController',
         controllerAs: 'shop'
