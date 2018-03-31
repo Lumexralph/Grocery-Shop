@@ -229,6 +229,18 @@ Modules
 button[uib-btn-checkbox] {
   margin-bottom: 10px;
 }
+.carousel-img {
+  height: 200px;
+  width: 200px;
+}
+
+/* desktop */
+@media (min-width: 40em) { 
+  .carousel-img {
+    height: 400px;
+    width: 400px;
+  }
+}
 
 /* footer Module */
 .footer {
