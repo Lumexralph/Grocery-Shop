@@ -185,7 +185,7 @@ Modules
 
 @media (min-width: 40em) {
   .header {
-    height: 60px;
+    height: 100px;
   }
   .header-nav {
     font-size: 1.125em;
