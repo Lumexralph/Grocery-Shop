@@ -243,6 +243,8 @@ Modules
 }
 button[uib-btn-checkbox] {
   margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
 }
 .carousel-img {
   height: 200px;
