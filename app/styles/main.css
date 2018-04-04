@@ -74,7 +74,7 @@ Theme Styles
   background-color: rgb(35, 168, 35);
 }
 .header-secondary {
-  color: rgb(189, 219, 189);
+  color: rgb(246, 247, 246);
 }
 .header-active {
   background: rgb(246, 247, 246);
@@ -160,9 +160,13 @@ Modules
   font-weight: bold;
   font-size: 1.1em;
 }
+.header-nav-title {
+  margin-top:0px;
+  color: rgb(221, 243, 243);
+}
 .header-nav {
-  margin-top: 30px;
   top: unset;
+  font-size: 1.125em;
 }
 .header-nav-primary {
   background: rgb(0, 105, 105);
@@ -171,6 +175,9 @@ Modules
 .header-secondary-nav {
   padding: 5px;
   border-radius: 5%;
+}
+.nav-link {
+  margin: 10px 0;
 }
 .link {
   list-style-type: none;
@@ -181,6 +188,7 @@ Modules
   border: 1px solid white;
 }
 
+
 /* for desktop */
 
 @media (min-width: 40em) {
@@ -188,13 +196,14 @@ Modules
     height: 100px;
   }
   .header-nav {
-    font-size: 1.125em;
+    font-size: 1.2em;
     margin-top: 0;
   }
   .link {
     display: flex;
   }
   .nav-link {
+    margin: unset;
     flex: 2;
     text-align: left;
   }
@@ -212,6 +221,9 @@ Modules
 }
 .grocery-title {
   font-weight: bolder;
+}
+.grocery-text {
+  color: rgb(16, 71, 71);
 }
 .grocery-primary {
   background: rgb(189, 219, 189);
