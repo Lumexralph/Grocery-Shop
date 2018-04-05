@@ -263,6 +263,7 @@ button[uib-btn-checkbox] {
 .footer {
   height: 200px;
   text-align: center;
+  padding: 20px;
 }
 .footer-text, .footer-text a {
   text-decoration: none;
