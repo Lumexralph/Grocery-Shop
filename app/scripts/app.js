@@ -19,6 +19,10 @@ angular
     'ui.bootstrap',
     'ui.bootstrap.tpls'
   ])
+  .controller('AppController', ['$scope', function ($scope) {
+    $scope.currentYear = new Date().getFullYear();
+    
+  }])
   .config(['$routeProvider', '$locationProvider', 
   function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);

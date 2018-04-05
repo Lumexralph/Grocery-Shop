@@ -264,6 +264,7 @@ button[uib-btn-checkbox] {
   height: 200px;
   text-align: center;
   padding: 20px;
+  font-size: 1.125em;
 }
 .footer-text, .footer-text a {
   text-decoration: none;
@@ -272,13 +273,17 @@ button[uib-btn-checkbox] {
 .footer-text a:hover {
   color: rgb(26, 126, 126);
 }
+.footer i {
+  margin: 10px;
+}
 
 /* for desktop */
 
 @media (min-width: 48em) {
-  
-}.footer {
-  height: 150px;
+  .footer {
+    height: 150px;
+    font-size: 1.3em;
+  }  
 }
 
 /***************************
