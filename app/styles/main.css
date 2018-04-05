@@ -291,7 +291,8 @@ Shopping Page
    display: inline-flex;
  }
  .product-list-setting {
-   padding: 5px;
+   padding-top: 10px;
+   padding-bottom: 10px;
    border: 1px solid orange;
  }
  .product-list-setting-btn {
@@ -413,6 +414,9 @@ Product Page
   margin: 10px 0;
   font-weight: bold;
 }
+
+
+
 .cart-summary {
   background: rgb(0, 143, 143);
 }
@@ -432,18 +436,32 @@ Product Page
 }
 .cart-summary-text > h5 {
   background:whitesmoke; 
-  flex: 1;
+  flex: 2;
   margin-right: 5px;
 }
 .cart-summary-text > h6 {
-  background:whitesmoke; 
-  flex: 2;
+  color: powderblue;
+  font-weight: 600;
+  flex: 1;
 }
 .cart-summary-text > h5, .cart-summary-text > h6 {
   height: 25px;
   padding: 5px;
   border: 1px solid powderblue;
   border-radius: 5%;
+}
+
+.cart-summary-total {
+  font-size: large;
+  font-weight: 600;
+}
+.cart-summary-total + h6 {
+  color: whitesmoke;
+}
+
+.cart-table-img > img {
+  height: 80px;
+  width: 80px;
 }
 
 /* for desktop */

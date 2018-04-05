@@ -38,11 +38,16 @@ angular
         controller: 'ShopController',
         controllerAs: 'shop'
       })
-      .when('/product/', {
-        templateUrl: 'views/product.html'
+      .when('/product', {
+        templateUrl: 'views/product.html',
+        controller: 'ProductController',
+        controllerAs: 'prod'
+
       })
       .when('/cart', {
-        templateUrl: 'views/cart.html'
+        templateUrl: 'views/cart.html',
+        controller: 'CartController',
+        controllerAs: 'cart'
       })
       .otherwise({
         redirectTo: '/'
