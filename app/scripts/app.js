@@ -19,6 +19,10 @@ angular
     'ui.bootstrap',
     'ui.bootstrap.tpls'
   ])
+  .controller('AppController', ['$scope', function ($scope) {
+    $scope.currentYear = new Date().getFullYear();
+    
+  }])
   .config(['$routeProvider', '$locationProvider', 
   function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
@@ -33,7 +37,7 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/shop/', {
+      .when('/shopping/', {
         templateUrl: 'views/shop.html',
         controller: 'ShopController',
         controllerAs: 'shop'

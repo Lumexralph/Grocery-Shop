@@ -9,6 +9,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
   <!-- endbuild -->
@@ -18,7 +19,7 @@
   <base href="/" />
 </head>
 
-<body>
+<body ng-controller="AppController">
   <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -26,19 +27,17 @@
   <!-- Add your site or application content here -->
   <header class="header header-primary">
     <div class="container">
+      <h2 class="header-nav-title">Grocery Cloud</h2>
       <nav class="nav header-nav">
         <ul class="link">
           <li class="nav-link">
-            <a class="header-nav-primary header-secondary header-secondary-nav" href="/">Home</a>
+            <a class="header-secondary header-secondary-nav" href="/">Home</a>
           </li>
           <li class="nav-link">
-            <a class="header-secondary header-secondary-nav" href="/product?name=Bib">Products</a>
-          </li>
-          <li class="nav-link">
-            <a class="header-secondary header-secondary-nav" href="/shop">Shop</a>
+            <a class="header-secondary header-secondary-nav" href="/shopping">Shop</a>
           </li>
           <li class="cart">
-            <a class="header-secondary header-secondary-nav" href="/cart">Cart</a>
+            <a class="header-secondary header-secondary-nav" href="/cart"><i class="fas fa-shopping-cart"></i></a>
           </li>
         </ul>
       </nav>
@@ -48,9 +47,9 @@
   <main>
     <section class="grocery grocery-primary">
       <div class="container">
-        <h2 class="grocery-title">Grocery Cloud</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Culpa ipsam obcaecati suscipit reprehenderit.
-          Labore placeat accusantium modi? Ipsum natus veniam inventore a, rem fuga! Autem, maxime iusto! Totam.</p>
+        <h2 class="grocery-title">Grocery Cloud</h2>  
+
+        <h4 class="grocery-text">Welcome to the No 1. online store in Africa. Have a beautiful experience ..</h4>
       </div>
     </section>
     <section>
@@ -64,26 +63,20 @@
       <div class="row">
         <div class="col-xs-12"></div>
       </div>
-      <div class="row">email</div>
+      <div class="row">olumideralph@gmail.com</div>
       <div class="row">
         <div class="col-xs-12 col-md-6" col-lg-6><a href="#">About Us</a></div>
         <div class="col-xs-12 col-md-6 col-lg-6"><a href="#">Contact Us</a></div>
       </div>
       <div class="row">
-        <div class="col-xs-3 col-md-3 col-lg-3">
-          <a href="#">github</a>
-        </div>
-        <div class="col-xs-3 col-md-3 col-lg-3">
-          <a href="#">FCC</a>
-        </div>
-        <div class="col-xs-3 col-md-3 col-lg-3">
-          <a href="">Linkedin</a>
-        </div>
-        <div class="col-xs-3 col-md-3 col-lg-3">
-          <a href="#">any social media</a>
-        </div>
+          <a href="https://github.com/Lumexralph/" target="_blank"><i class="fab fa-github"></i></a>
+
+          <a href="https://www.freecodecamp.org/lumexralph" target="_blank"><i class="fab fa-free-code-camp"></i></a>
+
+          <a href="https://www.linkedin.com/in/ogundeleolumide/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
       </div>
-      <div class="row">Copyright</div>
+      <div class="row">&copy; {{currentYear}} <a href="/">Grocery Cloud</a></div>
     </div>
   </footer>
 
