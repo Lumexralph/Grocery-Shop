@@ -53,6 +53,11 @@ angular
         controller: 'CartController',
         controllerAs: 'cart'
       })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactController',
+        controllerAs: 'contact'
+      })
       .otherwise({
         redirectTo: '/'
       });
