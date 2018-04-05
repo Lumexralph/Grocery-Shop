@@ -19,6 +19,10 @@ angular
     'ui.bootstrap',
     'ui.bootstrap.tpls'
   ])
+  .controller('AppController', ['$scope', function ($scope) {
+    $scope.currentYear = new Date().getFullYear();
+    
+  }])
   .config(['$routeProvider', '$locationProvider', 
   function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
@@ -33,16 +37,21 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/shop/', {
+      .when('/shopping/', {
         templateUrl: 'views/shop.html',
         controller: 'ShopController',
         controllerAs: 'shop'
       })
-      .when('/product/', {
-        templateUrl: 'views/product.html'
+      .when('/product', {
+        templateUrl: 'views/product.html',
+        controller: 'ProductController',
+        controllerAs: 'prod'
+
       })
       .when('/cart', {
-        templateUrl: 'views/cart.html'
+        templateUrl: 'views/cart.html',
+        controller: 'CartController',
+        controllerAs: 'cart'
       })
       .otherwise({
         redirectTo: '/'
