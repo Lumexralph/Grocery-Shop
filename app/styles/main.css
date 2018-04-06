@@ -314,7 +314,6 @@ Shopping Page
  .category {  
   /* height: 500px; */
   position: relative;
-  border: 1px solid black;
   padding: 5px;
  }
  .category-top-column {
@@ -336,7 +335,8 @@ Shopping Page
  .product-list-setting {
    padding-top: 10px;
    padding-bottom: 10px;
-   border: 1px solid orange;
+   font-size: 1.2em;
+   color: white;
  }
  .product-list-setting-btn {
    margin-right: 24px;
