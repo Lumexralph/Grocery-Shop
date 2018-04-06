@@ -295,6 +295,21 @@ Shopping Page
   height: 150px!important;
 }
 
+.shop-img-text {
+  font-size: 1.5em;
+}
+
+/* for desktop */
+
+@media (min-width: 48em) {
+  .footer {
+    height: 150px;
+  } 
+  .shop-img-text {
+    font-size: 1.5em;
+  } 
+}
+
  /* Category Module */
  .category {  
   /* height: 500px; */
