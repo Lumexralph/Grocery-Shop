@@ -73,7 +73,7 @@
               <div class="col-sm-3 col-md-3" ng-repeat="item in (shop.toggleOn  ? shop.itemsInstock : shop.itemInSubcategory)">
                 <div class="thumbnail">
                   <a href="/product?name={{item.name}}">
-                    <img ng-src="{{item.imagelink}}" alt="{{item.name}} product image">
+                    <img class="shop-img" ng-src="{{item.imagelink}}" alt="{{item.name}} product image">
                   <div class="caption text-center">
                     <h3>{{item.name}}</h3>
                   </a>

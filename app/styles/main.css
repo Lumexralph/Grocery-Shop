@@ -291,16 +291,9 @@ button[uib-btn-checkbox] {
 Shopping Page
 ****************************
 ***************************/
- /* Theme */
- .category-primary {
-
- }
- .category-secondary {
-
- }
- .category-complementary {
-
- }
+.shop-img {
+  height: 150px!important;
+}
 
  /* Category Module */
  .category {  
