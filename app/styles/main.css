@@ -507,4 +507,15 @@ Product Page
   }
 }
 
+/* Contact page */
+
+
+
+/* desktop */
+@media (min-width: 40em) { 
+  .contact-form {
+    width: 50%;
+  }
+}
+
 
