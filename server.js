@@ -1,5 +1,6 @@
 const express = require('express');
 
+const port = process.env.PORT || 8080;
 const app = express();
 
 //serve up app directory
@@ -14,4 +15,4 @@ app.get('/welcome', (req, res) => res.json({
   message: 'Welcome to Module 2 Homework'
 }))
 
-app.listen(8080, () => console.log('Our app is listening on port 8080...'));
+app.listen(port, () => console.log(`Our app is listening on port ${port}...`));
